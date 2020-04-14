@@ -230,7 +230,7 @@ def p_searchBook(crsr):
     ISBN = str(input("ISBN? "))
     areaIfInterest = str(input("areaIfInterest? "))
     try:
-        searchBook(crsr, authName, title, editor, ISBN, areaIfInterest)
+        print(searchBook(crsr, authName, title, editor, ISBN, areaIfInterest))
     except:
         print("Err occurred.")
 
@@ -322,6 +322,8 @@ def main(crsr):
         create_initial_database(crsr)
     elif(inp=="-1"):
         quit()
+
+    connection.commit() 
     main(crsr)
         
 
